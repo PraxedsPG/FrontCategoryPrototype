@@ -1,0 +1,8 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container { display: flex; justify-content: center; width: 100%; }
+.content-container{ width: 100%; max-width: 748px; margin: auto; }
+
+.container-list { display: flex; justify-content: center; margin: auto; margin-top: 30px;}
+.list{ color: white; width: 20%; }

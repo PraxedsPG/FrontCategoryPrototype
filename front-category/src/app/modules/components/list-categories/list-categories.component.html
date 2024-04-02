@@ -1,0 +1,18 @@
+
+@for(category of categories; track category.id) {
+  <div class="container-list">
+    <mat-card class="list">
+      <mat-card-header>
+        <mat-card-title>{{ category.name }}</mat-card-title>
+        <mat-card-title>{{ category.type }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-button (click)="deleteCategory(category)">Deletar</button>
+        <button mat-button [routerLink]="[category.id, 'upgrade']" >Editar</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+}
+
+
+

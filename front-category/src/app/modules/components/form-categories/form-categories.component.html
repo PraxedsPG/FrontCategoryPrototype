@@ -1,0 +1,33 @@
+<section>
+  <div>
+    @if(form){
+      <form [formGroup]="form" (ngSubmit)="save()">
+        @if(category) {
+          Atualização
+        } @else {
+          Cadastro
+        } de Categoria
+        <label for="name">Nome:</label>
+        <input type="text" name="name" placeholder="Insira o nome da categoria" formControlName="name">
+
+        @if(form.get('name')?.hasError('required') && form.get('name')?.touched) {
+          <p class="invalid-feedback d-block"> * O nome é obrigatório</p>
+         }
+
+        <label for="type">Tipo:</label>
+        <input type="text" name="name" placeholder="Insira o tipo da categoria" formControlName="type">
+
+        @if(form.get('type')?.hasError('required') && form.get('type')?.touched) {
+          <p class="invalid-feedback d-block"> * O tipo é obrigatório</p>
+         }
+         <button type="submit">
+          @if(category){
+            Atualizar
+          } @else {
+            Cadastrar
+          } Categoria
+        </button>
+      </form>
+    }
+  </div>
+</section>
